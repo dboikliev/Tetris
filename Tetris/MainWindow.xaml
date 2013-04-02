@@ -1,0 +1,180 @@
+﻿
+	<Window x:Class="Tetris.MainWindow"
+		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		Title="TETЯIS Alfa 1.0"
+		Name="mainWindow"
+		Icon="Tetris_Icon.ico"
+		KeyDown="mainWindow_KeyDown"
+		Width="450" Height="500"
+		MinWidth="450" MinHeight="500"
+		MaxWidth="450" MaxHeight="500">
+	<Grid>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition />
+			<ColumnDefinition Width="Auto"/>
+		</Grid.ColumnDefinitions>
+		<!--<StackPanel Panel.ZIndex="5"
+					Grid.Column="0"
+					IsHitTestVisible="True">
+			<StackPanel.Background>
+				<SolidColorBrush Opacity="0.20"
+								 Color="Gray" />
+			</StackPanel.Background>
+			<Button Name="playButton" Margin="100, 150, 100, 5" Content="Play"/>
+			<Button Name="optionsButton" Margin="100, 5, 100, 5" Content="Options"/>
+			<Button Name="highScoresButton" Margin="100, 5, 100, 5" Content="High Scores"/>
+			<Button Name="exitButton" Margin="100, 5, 100, 5" Content="Exit"/>
+		</StackPanel>-->
+		<Grid Name="gameField">
+			<Grid.RowDefinitions>
+				<RowDefinition />
+				<RowDefinition />
+				<RowDefinition />
+				<RowDefinition />
+				<RowDefinition />
+				<RowDefinition />
+				<RowDefinition />
+				<RowDefinition />
+				<RowDefinition />
+				<RowDefinition />
+				<RowDefinition />
+				<RowDefinition />
+				<RowDefinition />
+				<RowDefinition />
+				<RowDefinition />
+				<RowDefinition />
+				<RowDefinition />
+				<RowDefinition />
+			</Grid.RowDefinitions>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition />
+				<ColumnDefinition />
+				<ColumnDefinition />
+				<ColumnDefinition />
+				<ColumnDefinition />
+				<ColumnDefinition />
+				<ColumnDefinition />
+				<ColumnDefinition />
+				<ColumnDefinition />
+				<ColumnDefinition />
+				<ColumnDefinition />
+				<ColumnDefinition />
+				<ColumnDefinition />
+				<ColumnDefinition />
+			</Grid.ColumnDefinitions>
+		</Grid>
+		<Grid Name="stackedShapes">
+			<Grid.RowDefinitions>
+				<RowDefinition />
+				<RowDefinition />
+				<RowDefinition />
+				<RowDefinition />
+				<RowDefinition />
+				<RowDefinition />
+				<RowDefinition />
+				<RowDefinition />
+				<RowDefinition />
+				<RowDefinition />
+				<RowDefinition />
+				<RowDefinition />
+				<RowDefinition />
+				<RowDefinition />
+				<RowDefinition />
+				<RowDefinition />
+				<RowDefinition />
+				<RowDefinition />
+
+			</Grid.RowDefinitions>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition />
+				<ColumnDefinition />
+				<ColumnDefinition />
+				<ColumnDefinition />
+				<ColumnDefinition />
+				<ColumnDefinition />
+				<ColumnDefinition />
+				<ColumnDefinition />
+				<ColumnDefinition />
+				<ColumnDefinition />
+				<ColumnDefinition />
+				<ColumnDefinition />
+				<ColumnDefinition />
+				<ColumnDefinition />
+			</Grid.ColumnDefinitions>
+		</Grid>
+		<Border BorderBrush="Blue"
+				BorderThickness="3, 0, 0, 0"
+				Grid.Column="1">
+			<StackPanel Margin="5"
+						Width="100">
+				<TextBlock Text="Score: " />
+				<TextBox Name="scoreBox"
+						 IsReadOnly="True"
+						 Focusable="False" />
+				<TextBlock Text="Level: " />
+				<TextBox IsReadOnly="True"
+						 Name="levelBox"
+						 Focusable="False" />
+				<Border BorderThickness="1"
+						BorderBrush="Blue"
+						Margin="0 10 0 0">
+					<Grid Height="100"
+						  Name="previewGrid">
+						<Grid.RowDefinitions>
+							<RowDefinition />
+							<RowDefinition />
+							<RowDefinition />
+							<RowDefinition />
+							<RowDefinition />
+						</Grid.RowDefinitions>
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition />
+							<ColumnDefinition />
+							<ColumnDefinition />
+							<ColumnDefinition />
+							<ColumnDefinition />
+						</Grid.ColumnDefinitions>
+					</Grid>
+				</Border>
+				<TextBlock Margin="5" Text="Controls" 
+						   FontWeight="Bold"
+						   TextAlignment="Center"/>
+				<TextBlock Text="Move Down" 
+						   Margin="0 5 0 0"
+						   FontWeight="Bold"
+						   TextAlignment="Center"/>
+				<TextBlock Text="Down Arrow Key" TextAlignment="Center"/>
+				<TextBlock Text="Move Left"
+						   Margin="0 5 0 0"
+						   FontWeight="Bold"
+						   TextAlignment="Center" />
+				<TextBlock Text="Left Arrow Key"
+						   TextAlignment="Center" />
+				<TextBlock Text="Move Right"
+						   Margin="0 5 0 0"
+						   FontWeight="Bold"
+						   TextAlignment="Center" />
+				<TextBlock Text="Right Arrow Key" TextAlignment="Center" />
+				<TextBlock Text="Drop"
+						   Margin="0 5 0 0"
+						   FontWeight="Bold"
+						   TextAlignment="Center" />
+				<TextBlock Text="Spacebar"
+						   TextAlignment="Center" />
+				<TextBlock Text="Rotate"
+						   Margin="0 5 0 0"
+						   FontWeight="Bold"
+						   TextAlignment="Center"/>
+				<TextBlock Text="Up Arrow Key"
+						   TextAlignment="Center" />
+				<TextBlock Text="Pause / Unpause"
+						   FontWeight="Bold"
+						   Margin="0 5 0 0"
+						   TextAlignment="Center" />
+				<TextBlock Text="Left Ctrl"
+						   TextAlignment="Center" />
+			</StackPanel>
+		</Border>
+	</Grid>
+</Window>
